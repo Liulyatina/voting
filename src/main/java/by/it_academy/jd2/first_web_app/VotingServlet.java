@@ -44,7 +44,7 @@ public class VotingServlet extends HttpServlet {
             return;
         }
 
-        String voteInfo = "Лучший исполнитель: " + bestArtist + " , Жанры: " + String.join(",", bestGenres) + ", О вас: " + aboutMe;
+        String voteInfo = "Лучший исполнитель))))))))))): " + bestArtist + " , Жанры: " + String.join(",", bestGenres) + ", О вас: " + aboutMe;
         voteInfoVotes.add(voteInfo);
 
         response.setContentType("text/html");
