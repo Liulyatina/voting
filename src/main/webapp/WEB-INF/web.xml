@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         metadata-complete="false"
+         version="6.0">
+
+  <servlet>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>by.it_academy.jd2.first_web_app.VotingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FirstJSP</servlet-name>
+    <jsp-file>/index.jsp</jsp-file>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FirstJSP</servlet-name>
+    <url-pattern>/jsp</url-pattern>
+  </servlet-mapping>
+
+</web-app>
