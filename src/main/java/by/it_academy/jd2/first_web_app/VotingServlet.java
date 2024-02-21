@@ -33,17 +33,18 @@ public class VotingServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws SecurityException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
+
         String bestArtist = request.getParameter(ARTIST_PARAM_NAME);
         String[] bestGenres = request.getParameterValues(GENRE_PARAM_NAME);
         String aboutMe = request.getParameter(ABOUT_PARAM_NAME);
 
         // Обновление счётчика лучшего артиста
-        bestArtistVotes.put(bestArtist, bestArtistVotes.getOrDefault(bestArtist, 0) + 1);
+        bestArtistVotes.compute(bestArtist, (k, v) -> v != null ? v + 1 : 1);
 
         // Обновление счётчика лучших жанров
         if (bestGenres != null) {
             for (String genre : bestGenres) {
-                bestGenreVotes.put(genre, bestGenreVotes.getOrDefault(genre, 0) + 1);
+                bestGenreVotes.compute(genre, (k, v) -> v != null ? v + 1 : 1);
             }
         }
 
