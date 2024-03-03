@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+<h1>Форма голосования</h1>
+<form action="/first_web_app-1.0-SNAPSHOT/vote" method="POST">
+
+    <label for="artist">Лучший исполнитель:</label>
+    <select name="artist" id="artist">
+        <option value="Скриптонит">Скриптонит</option>
+        <option value="Макс Корж">Макс Корж</option>
+        <option value="Тима Белорусских">Тима Белорусских</option>
+        <option value="ЛСП">ЛСП</option>
+    </select>
+
+    <br><br>
+    <label>Популярные жанры (выберите от 3 до 5 вариантов из 10):</label>
+    <br><br>
+    <input type="checkbox" name="genre" value="Rock"/>Rock
+    <input type="checkbox" name="genre" value="Hip-hop"/>Hip-hop
+    <input type="checkbox" name="genre" value="Techno"/>Techno
+    <input type="checkbox" name="genre" value="Pop"/>Pop
+    <input type="checkbox" name="genre" value="KPop"/>KPop
+    <input type="checkbox" name="genre" value="Lyric"/>Lyric
+    <input type="checkbox" name="genre" value="Jazz"/>Jazz
+    <input type="checkbox" name="genre" value="Fonk"/>Fonk
+    <input type="checkbox" name="genre" value="Folk"/>Folk
+    <input type="checkbox" name="genre" value="Blues"/>Blues
+    <br><br>
+    <label for="about">Обо мне:</label>
+    <br><br>
+    <textarea name="about" id="about" rows="4" cols="50"></textarea>
+    <br><br>
+    <input type="submit" value="Проголосовать">
+</form>
+</body>
+</html>
