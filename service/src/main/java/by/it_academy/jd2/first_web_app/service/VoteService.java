@@ -41,8 +41,4 @@ public class VoteService implements IVoteService {
         return this.voteDao.getAbout();
     }
 
-
-    private static VoteService getVoteService(IVoteDao VoteService) {
-        return new VoteService(VoteService);
-    }
 }

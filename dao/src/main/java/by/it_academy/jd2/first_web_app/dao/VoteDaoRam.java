@@ -6,14 +6,19 @@ import java.util.*;
 
 public class VoteDaoRam implements IVoteDao {
 
-    private Map<String, Integer> artistsScore = new HashMap<>();
-    private Map<String, Integer> genresScore = new HashMap<>();
-    private List<String> aboutList = new ArrayList<>();
+    private final Map<String, Integer> artistsScore;
+    private final Map<String, Integer> genresScore;
+    private final List<String> aboutList;
 
     public VoteDaoRam() {
         artistsScore = new HashMap<>();
         genresScore = new HashMap<>();
         aboutList = new ArrayList<>();
+    }
+    public VoteDaoRam(Map<String, Integer> artistsScore, Map<String, Integer> genresScore, List<String> aboutList) {
+        this.artistsScore = artistsScore;
+        this.genresScore = genresScore;
+        this.aboutList = aboutList;
     }
 
     @Override

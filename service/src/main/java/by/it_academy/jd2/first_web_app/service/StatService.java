@@ -50,15 +50,6 @@ public class StatService implements IStatService {
         return voteService.getGenre().getOrDefault(genre, 0);
     }
 
-
-    private List<String> getTop(Map<String, Integer> data) {
-        return data.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByValue())
-                .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
-    }
-
     private List<Map.Entry<String, Integer>> getTopWithScore(Map<String, Integer> data) {
         if (data == null) {
             return null;
